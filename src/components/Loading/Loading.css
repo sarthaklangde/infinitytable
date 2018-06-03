@@ -1,0 +1,77 @@
+.animation_container {
+  position: relative;
+  display: flex;
+  align-content: center;
+}
+.loader {
+  margin: 0px auto;
+}
+.loader:before {
+   content: '';
+   display: block;
+   padding-top: 100%;
+}
+.circular {
+  animation: rotate 2s linear infinite;
+  height: 100%;
+  transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+}
+
+.path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+.path-monochrome {
+  animation: dash 1.5s ease-in-out infinite;
+  stroke: white;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@keyframes color {
+  100%,
+  0% {
+    stroke: #164a74;
+  }
+  40% {
+    stroke: #17c490;
+  }
+  66% {
+    stroke: #009ddc;
+  }
+  80%,
+  90% {
+    stroke: #31738B;
+  }
+}

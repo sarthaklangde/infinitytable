@@ -1,0 +1,43 @@
+.table-wrapper {
+  margin: 16px 16px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  border: 1px solid $text-color-light;
+}
+
+.table-container {
+
+}
+
+.table-row {
+  display: flex;
+  height: 50px;
+  border-top: 1px solid $color-border;
+}
+
+.table-column {
+  padding: 16px;
+}
+
+.first {
+  flex: 0 0 20%;
+}
+
+.second {
+  flex: 0 0 15%;
+}
+
+.third {
+  flex: 0 0 30%;
+}
+
+.fourth {
+  flex: 0 0 35%;
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 64px;
+
+}

@@ -1,0 +1,24 @@
+.input-wrapper {
+  display: flex;
+  padding: 16px;
+}
+
+.input-item {
+  composes: ipt from global;
+}
+
+.first {
+  flex: 0 0 20%;
+}
+
+.second {
+  flex: 0 0 15%;
+}
+
+.third {
+  flex: 0 0 30%;
+}
+
+.fourth {
+  flex: 0 0 35%;
+}
